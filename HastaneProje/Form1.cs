@@ -27,7 +27,7 @@ namespace HastaneProje
             komut1.Parameters.AddWithValue("@p1", int.Parse(hastaID_text.Text));
             komut1.Parameters.AddWithValue("@p2", DoktorIsım_text.Text);
             komut1.Parameters.AddWithValue("@p3", DoktorSoyad_text.Text);
-            string doktor = "doktor";
+            string doktor = "doktor";// hatalı
             komut1.Parameters.AddWithValue("@p4", doktor);
             komut1.ExecuteNonQuery(); 
             baglanti.Close();
@@ -54,7 +54,7 @@ namespace HastaneProje
         {
             baglanti.Open();
             string sorgu = "select * from hasta";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sorgu, baglanti);
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sorgu, baglanti);  
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
