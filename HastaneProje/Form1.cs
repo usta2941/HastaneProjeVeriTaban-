@@ -28,7 +28,7 @@ namespace HastaneProje
             komut1.Parameters.AddWithValue("@p2", DoktorIsım_text.Text);
             komut1.Parameters.AddWithValue("@p3", DoktorSoyad_text.Text);
             string doktor = "doktor";// hatalı
-            komut1.Parameters.AddWithValue("@p4", doktor);
+            komut1.Parameters.AddWithValue("@p4", doktor); // hatalı
             komut1.ExecuteNonQuery(); 
             baglanti.Close();
             baglanti.Open();
